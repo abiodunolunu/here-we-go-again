@@ -55,7 +55,6 @@ const enter = (el: HTMLElement) => {
 };
 
 const leave = (el: HTMLElement, done: any) => {
-  console.log({ done });
   gsap.to(el, {
     // scaleY: 0,
     opacity: 0,

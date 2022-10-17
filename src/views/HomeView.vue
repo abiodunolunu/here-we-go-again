@@ -8,14 +8,12 @@ import { onMounted, ref } from "vue";
 onMounted(() => {
   const text = new SplitType("#info", { types: "words, chars" });
 
-  console.log({ text });
-
   gsap.from(text.chars, {
-    duration: 0.8,
+    duration: 0.1,
     // opacity: 0,
-    // scale: 10,
-    // y: -80,
-    // rotationX: 18,
+    scale: 0,
+    y: -20,
+    rotationX: 20,
     transformOrigin: "0% 50% -50",
     ease: "bounce.out",
     stagger: 0.02,
@@ -41,14 +39,14 @@ const showContactModal = ref(false);
         I am a self-taught front-end developer who is well versed in and uses
         modern frontend technologies like <span>VueJs</span>,
         <span>ReactJs</span>, <span>Svelte</span>, <span>TypeScript</span>, and
-        sometimes do a bit of server-side scripting with
-        <span>Node.js</span>,<span>Express</span> , <span>MongoDB</span>,
-        <span>GraphQL</span>, <span>WebSockets</span>. Started March 2018, Since
-        then, I've worked in various sectors such as Education, Health, Fintech
-        and Commerce, being a frontend engineer in all of them. I watch anime
-        🤡, and sometimes biking 🚴‍♂️. If you are looking for a Frontend developer
-        to help bring your ideas to life, work on an existing project, or join a
-        team of developers? I am currently available to take on any project.
+        sometimes do a bit of server-side scripting with <span>Node.js</span>,
+        <span>Express</span> , <span>MongoDB</span>, <span>GraphQL</span>,
+        <span>WebSockets</span>. Started March 2018, Since then, I've worked in
+        various sectors such as Education, Health, Fintech and Commerce, being a
+        frontend engineer in all of them. I watch anime 🤡, and sometimes biking
+        🚴‍♂️. If you are looking for a Frontend developer to help bring your ideas
+        to life, work on an existing project, or join a team of developers? I am
+        currently available to take on any project.
       </p>
     </section>
 
@@ -57,15 +55,15 @@ const showContactModal = ref(false);
         You can see my
         <span class="btn">
           <router-link :to="{ name: 'experience' }">
-            Work Time Line
+            ☞ Work Time Line
           </router-link> </span
         >,
         <span class="btn">
           <router-link :to="{ name: 'npm-packages' }">
-            NPM Packages
+            ☞ NPM Packages
           </router-link></span
         >, and
-        <span class="btn" @click="showContactModal = true">Contact me</span>
+        <span class="btn" @click="showContactModal = true"> ☞ Contact me</span>
         here.
       </p>
     </section>
@@ -82,7 +80,7 @@ p.info {
     @apply text-blue-600 rounded-[0.25rem]  font-mono;
 
     &.btn {
-      @apply underline underline-offset-2 cursor-pointer;
+      @apply underline underline-offset-2 cursor-pointer font-semibold;
     }
   }
 }

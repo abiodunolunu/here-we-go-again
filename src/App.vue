@@ -30,7 +30,7 @@ const leave = (el: HTMLElement, done: any) => {
 <template>
   <div>
     <app-header />
-    <div class="container mx-auto my-20 px-10">
+    <div class="container mx-auto my-20 px-8">
       <router-view v-slot="{ Component }">
         <transition
           appear

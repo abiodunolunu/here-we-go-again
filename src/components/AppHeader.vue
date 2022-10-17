@@ -7,13 +7,13 @@ const showModal = ref(false);
 </script>
 
 <template>
-  <header class="py-5 px-1.5">
+  <header class="py-5 px-8">
     <div class="flex justify-between items-center container mx-auto">
       <p class="name text-3xl font-bold">
         <router-link to="/"> Abeydev </router-link>
       </p>
       <ul class="flex items-center gap-2 text-sm text-blue-500">
-        <li @click="showModal = true">Contact</li>
+        <li @click="showModal = true" class="cursor-pointer">Contact</li>
         <li>
           <a
             target="_blank"
